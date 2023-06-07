@@ -1,0 +1,620 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="jumbotron.css">
+  <link href="bootstrap.min.css" rel="stylesheet"> -->
+  <!-- <link rel="stylesheet" href="task4.css"> -->
+  <!-- <link rel="stylesheet" href="/BizLand/assets/css/style.css">
+  <link rel="stylesheet" href="C:\Users\albin\HTML & CSS\nav.css"> -->
+  <!-- <style> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <style>
+    p.custom-lead {
+      font-size: 30px;
+      /* Adjust the value as needed */
+      font-family: 'Poppins', sans-serif;
+    }
+
+    p.custom-text {
+      font-size: 35px;
+    }
+
+    div {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* .col-md-5{
+  position: relative;     
+} */
+    /* .custom-image {
+    position: relative;
+    top:0;
+    left:0;
+} */
+
+    .position-relative {
+      position: relative;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(231, 187, 11, 0.521);
+      /* Adjust the color and opacity as desired */
+      z-index: 1;
+      /* Ensure the overlay is on top of the image */
+      pointer-events: none;
+      /* Allows click events to pass through the overlay */
+      box-shadow: 0 0 0 rgba(255, 255, 255, 0.407);
+      /*Add a shadow effect to the overlay*/
+    }
+
+    /* .custom-paragraph {
+  font-size: 45px; 
+} */
+    .custom-input {
+      width: 300px;
+      /* Set the desired width */
+      height: 40px;
+      /* Set the desired height */
+      font-size: 16px;
+      /* Set the desired font size */
+      background-color: rgb(249, 201, 8);
+      /* Set the desired background color */
+      color: #333;
+      /* Set the desired text color */
+      /* border-color: orangered; */
+      /* Set the desired border color */
+      /* Additional custom styles as needed */
+    }
+
+    .custom-input-group {
+      width: 530px;
+      /* Set the desired width */
+      height: 100px;
+      /* Set the desired height */
+      font-size: 200px;
+      /* Set the desired font size */
+      margin-left: 80px;
+      /* Additional custom styles as needed */
+    }
+
+    .custom-btn {
+      width: 130px;
+      /* Set the desired width */
+      height: 80px;
+      /* Set the desired height */
+      font-size: 0;
+      /* Set the desired font size */
+    }
+
+    .custom-code {
+      font-size: 20px;
+      /* Set the desired font size */
+    }
+
+    .custom-footer-headings {
+      font-size: 35px;
+      /* Set the desired font size */
+    }
+
+    .social-icons img {
+      filter: brightness(50%) sepia(100%) hue-rotate(0deg);
+      /* Apply color inversion */
+      /* background-color: #e6ad10; */
+      /* color: #e6ad10; */
+      /* border-color: #e6ad10; */
+    }
+
+    .image-container-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .image-container {
+      position: relative;
+      width: max-content;
+      height: max-content;
+
+    }
+
+    .dot {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60px;
+      height: 60px;
+      background-color: white;
+      border-radius: 50%;
+    }
+
+    .image-container .after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: none;
+      color: #FFF;
+      display: block;
+      background: rgb(104, 104, 11, 0.7);
+    }
+
+    .navbar {
+      background-color: #ffae00;
+    }
+
+    .navbar .container {
+      /* display: flex; */
+      /* align-items: center; */
+      justify-content: center;
+    }
+
+    .nav .nav-link+.nav-link {
+      margin-left: 2rem;
+      /* Adjust the spacing as needed */
+    }
+
+    button.btn-gap {
+      margin-left: 30px;
+      /* Adjust the margin as needed */
+    }
+
+    .image {
+      transform: rotate(180deg);
+      margin-left: 8px;
+    }
+    .input-field::placeholder {
+  color: rgb(255, 255, 255); /* Change the color to your desired value */
+  
+}
+.img1 {
+  /* border: 1px solid #f00; */
+  position: relative;
+  z-index: 2;
+}
+
+.img2 {
+  /* border: 1px solid #0f0; */
+  position: relative;
+  z-index: 1;
+  bottom: 250px;
+  right:-250px;
+}
+.section {
+      display: flex;
+    }
+
+    .div1, .div2 {
+      width: 50%;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <section>
+    <header id="header" class="header fixed-top d-flex align-items-center bg-warning">
+      <div class="container-fluid" style="padding: 0px;">
+        <nav class="navbar navbar-expand-lg ">
+          <div class="container">
+            <a href="#" rel="home" class="nav-link me-auto px-4">
+              <img alt="" src="/task-4-icons/task-4-icons/1.png" width="auto" height="auto">
+            </a>            
+            <button class="navbar-toggler btn-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="nav" style="display: flex; justify-content: center; align-items: center;">
+                          <li class="nav-item">
+                            <a class="nav-link px-4" style="font-size:x-large;color: #FFF;">Home</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link px-4" style="font-size:x-large; color: #FFF;">About</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link px-4" style="font-size:x-large;color: #FFF;">Services</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link px-4" style="font-size:x-large;color: #FFF;">Contact</a>
+                          </li>
+                          <li class="nav-item px-4">
+                            <div class="input-group py-3">
+                              <input type="text" class="form-control bg-warning input-field" placeholder="Search..." style="box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);">
+                              <div class="input-group-append">
+                                <button class="btn btn-info" type="submit" style="height: 40px;width: 70px;box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);" >
+                                  <i class="bi bi-search text-light"></i>
+                                </button>
+                              </div>
+                            </div>
+                          </li>
+                  </ul>
+            </div>
+          </div>
+        </nav>
+
+       
+
+      </div>
+    </header>
+  </section>
+
+  <section id="intro">
+    <div class="pt-5 pb-5">
+      <div class="container-fluid bg-warning ">
+        <div class="row row-cols-1 row-cols-md-3 g-3 justify-content-center">
+          <div class="col-md-5 text-start pt-5" style="display: flex; flex-direction: column; justify-content: center;">
+            <div class="display-4 fw-bold text-light">First I wanted to be <br> a veterinarian</div>
+            <p class="custom-lead my-4 text-light">Lorem Ipsum avialable but the majorty have suffered alteration in
+              some form, by humour randomised words.</p>
+            <div class="" style="display: flex; justify-content: flex-start;">
+              <button class="btn btn-info text-light fw-bold btn-lg">Contact Us</button>
+              <button class="btn btn-gap btn-outline-light fw-bold btn-lg">Our Services</button>
+            </div>
+          </div>
+          <div class="col-md-5 text-end  " style="margin-bottom: 6vh; margin-top: 9vh;min-height: 80vh;">
+            <img class="custom-image" src="/task-4-icons/task-4-icons/2.png" alt="dog image"
+              style="height: auto;width: 400px; ;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="secondslide">
+    <div class="pt-5">
+      <div class="container-fluid bg-white">
+        <div class="row row-cols-1 row-cols-md-3 g-3 justify-content-center">
+          <div class="col-md-5 text-start" style="display: flex; flex-direction: column; justify-content: center;">
+            <div class="display-4 fw-bold">As a veterinarian and lover of animals</div>
+            <p class="custom-lead my-4 ">Lorem Ipsum avialable but the majorty suffered alteration in some form,by
+              humour randomised words.</p>
+            <div class="">
+              <button class="btn btn-warning fw-bold text-light btn-lg">Our Services</button>
+            </div>
+          </div>
+
+
+          <div class="image-container-container">
+            <div class="image-container col-md-5 offset-md-2" style="display: flex; flex-direction: column; justify-content: center;">
+              <div class="mainRunner">
+                <div class="img1">
+                  <img class="img-fluid" src="/task-4-icons/task-4-icons/3.png" style="z-index: 10;" alt="dog care">
+                  <div class="after"></div>
+                  <div class="dot">
+                    <div class="dot-center"
+                      style="display: flex; flex-direction: column;align-items: center; justify-content: center; width: 100%;height: 100%;">
+                      <img class="image" src="/task-4-icons/task-4-icons/Icon-5.png" alt="sent">
+                    </div>
+                  </div>
+                </div>
+                <img class="img2" src="/task-4-icons/task-4-icons/yellow.png" />
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="pb-5">
+      <div class="container-fluid bg-warning">
+        <div class="container pt-4">
+          <h1 class="display-4 text-light text-center fw-bold pt-5">Title Here</h1>
+          <p class="custom-lead my-4 text-light text-center ">Lorem Ipsum avialable, but the majorty have <br> suffered
+            alteration in some form.</p>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 g-3 justify-content-center">
+          <div class="col w-25 p-3 text-center text-light">
+            <div class="">
+              <img class="img-fluid" src="/task-4-icons/task-4-icons/4.png" alt="dog care">
+            </div>
+            <p class="custom-text fw-bold pt-4">Velerinarian</p>
+            <p class="custom-code pb-5">Lorem Ipsum avialable, but the majorty have suffered alteration in some.</p>
+          </div>
+          <div class="col w-25 p-3 text-center text-light">
+            <div class="">
+              <img class="img-fluid" src="/task-4-icons/task-4-icons/5.png" alt="dog care">
+            </div>
+            <p class="custom-text fw-bold pt-4">Vaccination Care</p>
+            <p class="custom-code pb-5">Lorem Ipsum avialable, but the majorty have suffered alteration in some.</p>
+          </div>
+          <div class="col w-25 p-3 text-center text-light">
+            <div class="">
+              <img class="img-fluid" src="/task-4-icons/task-4-icons/6.png" alt="dog care">
+            </div>
+            <p class="custom-text fw-bold pt-4 ">Dental Care</p>
+            <p class="custom-code pb-5">Lorem Ipsum avialable, but the majorty have suffered alteration in some.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="thirdslide">
+    <div class="pt-5">
+      <div class="container-fluid bg-white ">
+        <div class="row row-cols-1 row-cols-md-3 g-3 justify-content-center">
+
+          <div class="col-md-4" style="display: flex; flex-direction: column; justify-content: center;margin-right: 30px;">
+            <div class="image-container-container">
+              <div class="image-container col-md-5 offset-md-2">
+                <div class="mainRunner">
+                  <div class="img1">
+                    <img class="img-fluid" src="/task-4-icons/task-4-icons/7.png" style="z-index: 10;" alt="dog care">
+                    <div class="after"></div>
+                    <div class="dot">
+                      <div class="dot-center"
+                        style="display: flex; flex-direction: column;align-items: center; justify-content: center; width: 100%;height: 100%;">
+                        <img class="" src="/task-4-icons/task-4-icons/Icon-5.png" alt="sent" style="margin-right:8px;">
+                      </div>
+                    </div>
+                  </div>
+                  <img class="img2" src="/task-4-icons/task-4-icons/yellow.png" />
+                </div>
+            </div>
+          </div>
+          </div>
+
+          <div class="col-md-4 offset-md-2  text-end"
+            style="display: flex; flex-direction: column; justify-content: center;margin-left: 30px;">
+            <div class="display-4 fw-bold">As a veterinarian and lover of animals</div>
+            <p class="custom-lead  ">Lorem Ipsum avialable but the majorty suffered alteration in some form, by
+              humour randomised words.</p>
+            <div class="">
+              <button class="btn btn-warning text-light fw-bold btn-lg">Our Services</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+  </section>
+
+  <section>
+    <div class="">
+      <div class="container-fluid bg-warning p-5"
+        style="display: flex; flex-direction: column; justify-content: center;">
+        <div class="container">
+          <h1 class="display-2 text-light text-center fw-bold pt-5 ">Title Here</h1>
+          <p class="custom-lead my-4 text-light text-center  pb-5">Lorem Ipsum avialable, but the majorty have <br>suffered alteration in some form.</p>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 g-3 justify-content-center">
+          <div class="col w-25 p-3 text-center text-light">
+            <div class="">
+              <img class="img-fluid" src="/task-4-icons/task-4-icons/4.png" alt="dog care">
+            </div><br>
+            <h2 class="fw-bold"><del>$45</del> $30</h2><br>
+            <div class="btn">
+              <button class="btn btn-lg rounded-pill bg-info fw-bold text-light">Buy Now</button>
+            </div>
+          </div>
+          <div class="col w-25 p-3 text-center text-light">
+            <div class="">
+              <img class="img-fluid" src="/task-4-icons/task-4-icons/5.png" alt="dog care">
+            </div><br>
+            <h2 class="fw-bold"><del>$50</del> $40</h2><br>
+            <div class="btn">
+              <button class="btn btn-lg rounded-pill bg-info fw-bold text-light">Buy Now</button>
+            </div>
+          </div>
+          <div class="col w-25 p-3 text-center text-light">
+            <div class="">
+              <img class="img-fluid text-center" src="/task-4-icons/task-4-icons/6.png" alt="dog care">
+            </div><br>
+            <h2 class="fw-bold"><del>$45</del> $35</h2><br>
+            <div class="btn">
+              <button class="btn btn-lg rounded-pill bg-info fw-bold text-light">Buy Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- the vetcare team -->
+
+  <section>
+    <div class="pt-5">
+      <div class="container-fluid bg-white" style="align-items: center;"> 
+        <div class="container">
+          <h1 class="display-2 text-dark text-center fw-bolder pt-4 pb-4">The Vetcare Team</h1>
+          <p class="custom-lead my-4 text-dark text-center">Lorem Ipsum avialable, but the majorty have <br> suffered
+            alteration in some form.</p>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 g-3 justify-content-center">
+          <div class="col w-25 p-3 text-center text-dark">
+            <div class="">
+              <img class="img-fluid" src="/task-4-icons/task-4-icons/4.png" alt="dog care">
+            </div>
+            <p class="custom-lead text-dark fw-bold">Jennifer Mullen</p>
+            <P class="custom-code">VEETERINARY</P>
+            <div class="social-icons">
+              <img src="/task-4-icons/task-4-icons/Facebook.png" alt="Facebook">
+              <img src="/task-4-icons/task-4-icons/Twitter.png" alt="Twitter">
+              <img src="/task-4-icons/task-4-icons/Instagram.png" alt="Instagram">
+              <img src="/task-4-icons/task-4-icons/WhatsApp.png" alt="WhatsApp">
+            </div>
+          </div>
+          <div class="col w-25 p-3 text-center text-dark">
+            <div class="">
+              <img class="img-fluid" src="/task-4-icons/task-4-icons/5.png" alt="dog care">
+            </div>
+            <p class="custom-lead text-dark fw-bold">Sheeren Collins</p>
+            <P class="custom-code">ADMINISTRATION</P>
+            <div class="social-icons">
+              <img src="/task-4-icons/task-4-icons/Facebook.png" alt="Facebook">
+              <img src="/task-4-icons/task-4-icons/Twitter.png" alt="Twitter">
+              <img src="/task-4-icons/task-4-icons/Instagram.png" alt="Instagram">
+              <img src="/task-4-icons/task-4-icons/WhatsApp.png" alt="WhatsApp">
+            </div>
+          </div>
+          <div class="col w-25 p-3 text-center text-dark">
+            <div class="">
+              <img class="img-fluid" src="/task-4-icons/task-4-icons/6.png" alt="dog care">
+            </div>
+            <p class="custom-lead text-dark fw-bold">Jennifer Mullen</p>
+            <p class="custom-code">VEETERINARY</p>
+            <div class="social-icons">
+              <img src="/task-4-icons/task-4-icons/Facebook.png" alt="Facebook">
+              <img src="/task-4-icons/task-4-icons/Twitter.png" alt="Twitter">
+              <img src="/task-4-icons/task-4-icons/Instagram.png" alt="Instagram">
+              <img src="/task-4-icons/task-4-icons/WhatsApp.png" alt="WhatsApp">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="py-3">
+      <div class="container-fluid  py-5 my-5 ">
+        <div
+          style="background-image: url('/task-4-icons/task-4-icons/8.png'); min-height: 70vh; background-size: cover;">
+          <div class="row row-cols-1 row-cols-md-3 g-3 justify-content-center"
+            style="background-color: rgba(255, 208, 0, 0.764); min-height: 70vh; align-items: center;">
+            <div class="col-md-4 text-center text-light p-5">
+              <div class="">
+                <img class="img-fluid pt-4 pb-3" src="/task-4-icons/task-4-icons/Icon-2.png" alt="dog care">
+              </div>
+              <h2>+75766</h2>
+              <h2>Happy Clients</h2>
+            </div>
+            <div class="col-md-4 text-center text-light p-5">
+              <div class="">
+                <img class="img-fluid  pt-4 pb-3" src="/task-4-icons/task-4-icons/Icon-1.png" alt="dog care">
+              </div>
+              <h2>+5461</h2>
+              <h2>Departments</h2>
+            </div>
+            <div class="col-md-4 text-center text-light p-5">
+              <div class="">
+                <img class="img-fluid pt-4 pb-3" src="/task-4-icons/task-4-icons/Icon.png" alt="dog care">
+              </div>
+              <h2>+78789</h2>
+              <h2>Vaccinations</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="">
+    <div class="container">
+      <h1 class="display-2 text-center fw-bold ">Recent Posts</h1>
+      <p class="custom-lead my-4 text-center">Lorem Ipsum avialable, but the majorty have <br> suffered alteration in
+        some form.</p>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 g-3 justify-content-center">
+      <div class="col w-25 p-3">
+        <div class="card" style="width: 300px;">
+          <img src="/task-4-icons/task-4-icons/9.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">As a veterinarian and lover of animals</h5>
+            <p class="card-text text-info fw-bold">FEBRUARY 10,2023</p>
+            <p class="card-text">Lorem Ipsum avialable, but the majorty have suffered alteration in some words which
+              look.</p>
+            <a href="#" class="btn btn-white text-info fw-bold">Read More+</a>
+          </div>
+        </div>
+      </div>
+      <div class="col w-25 p-3" >
+        <div class="card" style="width: 300px;">
+          <img src="/task-4-icons/task-4-icons/10.png" class="card-img-top" alt="...">
+          <div class="card-body"  style="box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);">
+            <h5 class="card-title">As a veterinarian and lover of animals</h5>
+            <p class="card-text text-info fw-bold">FEBRUARY 11,2023</p>
+            <p class="card-text">Lorem Ipsum avialable, but the majorty have suffered alteration in some words which
+              look.</p>
+            <a href="#" class="btn btn-white text-info fw-bold">Read More+</a>
+          </div>
+        </div>
+      </div>
+      <div class="col w-25 p-3">
+        <div class="card" style="width: 300px;">
+          <img src="/task-4-icons/task-4-icons/11.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">As a veterinarian and lover of animals</h5>
+            <p class="card-text text-info fw-bold">FEBRUARY 09,2023</p>
+            <p class="card-text">Lorem Ipsum avialable, but the majorty have suffered alteration in some words which
+              look.</p>
+            <a href="#" class="btn btn-white text-info fw-bold">Read More+</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer id="footer" class="bd-footer py-5 mt-5 text-light bg-dark">
+    <div class="footer-top">
+      <div class="container-fluid py-5">
+        <div class="row row-cols-1 row-cols-md-3 g-3 justify-content-center">
+          <div class="col-lg-2 col-md-6 ">
+            <h1>About</h1>
+            <ul class="list-unstyled custom-code">
+              <li class="mb-2">History</a></li>
+              <li class="mb-2">Our team</a></li>
+              <li class="mb-2">Brand Guidelines</a></li>
+              <li class="mb-2">Terms & Condition</a></li>
+              <li class="mb-2">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 ">
+            <h1>Services</h1>
+            <ul class="list-unstyled custom-code">
+              <li class="mb-2">How to Order</a></li>
+              <li class="mb-2">Our Product</a></li>
+              <li class="mb-2">Order Status</a></li>
+              <li class="mb-2">Promo</a></li>
+              <li class="mb-2">Payment Method</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-5 text-end" style="display: flex; flex-direction: column; justify-content: center;">
+            <h1>Title Here</h1>
+            <p class="custom-code">Lorem Ipsum avialable but the majorty</p>
+            <div class="input-group custom-input-group py-3">
+              <input type="text" class="form-control bg-warning" placeholder="">
+              <div class="input-group-append input-group-end">
+                <button class="btn custom-btn btn-info" type="submit">
+                  <img src="/task-4-icons/task-4-icons/icon-4.png" alt="sent">
+                </button>
+              </div>
+            </div>
+            <div class="py-3 text-end text-md-end">
+              <div class="social-icon">
+                <img src="/task-4-icons/task-4-icons/Facebook.png" alt="Facebook" class="mx-1">
+                <img src="/task-4-icons/task-4-icons/Twitter.png" alt="Twitter" class="mx-1">
+                <img src="/task-4-icons/task-4-icons/Instagram.png" alt="Instagram" class="mx-1">
+                <img src="/task-4-icons/task-4-icons/WhatsApp.png" alt="WhatsApp" class="mx-1">
+              </div>
+            </div>
+          </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
